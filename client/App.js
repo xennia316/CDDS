@@ -6,7 +6,6 @@ export default function App() {
 	return (
 		<View style={styles.container}>
 			<Header />
-			<Text>This is a text</Text>
 		</View>
 	);
 }
@@ -16,6 +15,6 @@ const styles = StyleSheet.create({
 		flex: 1,
 		backgroundColor: "#fff",
 		alignItems: "center",
-		justifyContent: "center",
+		padding: 32,
 	},
 });
