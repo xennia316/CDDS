@@ -4,13 +4,14 @@ const styles = StyleSheet.create({
 	headerContainer: {
 		flexDirection: "row",
 		gap: 12,
+		width: "100%",
 	},
 	wrapper: {
 		backgroundColor: "#fff",
 		borderColor: "gray",
 		borderRadius: 24,
 		borderWidth: 1,
-		width: "70%",
+		width: "80%",
 		flexDirection: "row",
 		height: 40,
 		justifyContent: "space-between",
