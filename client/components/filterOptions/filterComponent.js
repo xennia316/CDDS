@@ -1,13 +1,13 @@
 import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
 	container: {
-		// backgroundColor: "pink",
+		height: "100%",
 	},
 	wrapper: {
-		alignSelf: "center",
 		flexDirection: "column",
 		alignItems: "center",
 		margin: 4,
+		justifyContent: "center",
 	},
 	image: {
 		height: 50,
@@ -17,7 +17,11 @@ export default styles = StyleSheet.create({
 	},
 	text: {
 		fontSize: 12,
-		paddingTop: 2,
+		paddingTop: 4,
 		fontWeight: 300,
+		font: "Poppins",
+	},
+	mainWrapper: {
+		height: "10%",
 	},
 });

@@ -36,14 +36,16 @@ const FilterOptions = () => {
 		);
 	};
 	return (
-		<FlatList
-			horizontal
-			data={data}
-			keyExtractor={(item) => item.id}
-			renderItem={renderItem}
-			style={styles.container}
-			showsHorizontalScrollIndicator={false}
-		/>
+		<View style={styles.mainWrapper}>
+			<FlatList
+				horizontal
+				data={data}
+				keyExtractor={(item) => item.id}
+				renderItem={renderItem}
+				style={styles.container}
+				showsHorizontalScrollIndicator={false}
+			/>
+		</View>
 	);
 };
 
