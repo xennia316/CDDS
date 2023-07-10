@@ -1,12 +1,9 @@
 import React from "react";
-import {
-	StyleSheet,
-	Text,
-	View,
-	TextInput,
-	TouchableOpacity,
-} from "react-native";
+import { Text, View, TextInput, TouchableOpacity } from "react-native";
+
+// Importing stylesheet and Icons
 import Ionicons from "@expo/vector-icons/Ionicons";
+import styles from "./header";
 
 const Header = () => {
 	return (
@@ -27,55 +24,5 @@ const Header = () => {
 		</View>
 	);
 };
-
-const styles = StyleSheet.create({
-	headerContainer: {
-		flexDirection: "row",
-		gap: 12,
-	},
-	wrapper: {
-		backgroundColor: "#fff",
-		borderColor: "gray",
-		borderRadius: 24,
-		borderWidth: 1,
-		width: "75%",
-		flexDirection: "row",
-		height: 40,
-		justifyContent: "space-between",
-		padding: 8,
-	},
-	textInput: {
-		flex: 1,
-		width: "50%",
-		flexDirection: "row",
-		justifyContent: "flex-end",
-		borderLeftWidth: 1,
-		borderLeftColor: "#E8E8EC",
-		padding: 2,
-		gap: 4,
-	},
-	viewLeft: {
-		flex: 1,
-		width: "50%",
-		alignSelf: "center",
-		flexDirection: "row",
-		alignItems: "center",
-		gap: 4,
-	},
-
-	viewLeftText: {
-		color: "#AAABB3",
-	},
-
-	filter: {
-		backgroundColor: "#FF8C3E",
-		width: 40,
-		height: 40,
-		borderRadius: "50%",
-		flexDirection: "row",
-		alignItems: "center",
-		justifyContent: "center",
-	},
-});
 
 export default Header;
