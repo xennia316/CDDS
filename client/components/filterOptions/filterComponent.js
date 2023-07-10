@@ -16,7 +16,8 @@ export default styles = StyleSheet.create({
 		borderRadius: 100,
 	},
 	text: {
-		fontSize: 14,
-		color: "gray",
+		fontSize: 12,
+		paddingTop: 2,
+		fontWeight: 300,
 	},
 });

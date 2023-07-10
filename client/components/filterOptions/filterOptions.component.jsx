@@ -22,11 +22,15 @@ const FilterOptions = () => {
 	const renderItem = ({ item }) => {
 		const isSelected = selectedItem === item.id;
 		const backgroundColor = isSelected ? "#262628" : "#F7F7F7";
+		const color = isSelected ? "#262628" : "gray";
 		return (
 			<TouchableOpacity onPress={() => setSelectedItem(item.id)}>
 				<View style={styles.wrapper}>
-					<Image style={backgroundColor} source={item.image} />
-					<Text style={styles.text}>{item.title}</Text>
+					<Image
+						style={[styles.image, { backgroundColor }]}
+						source={item.image}
+					/>
+					<Text style={[styles.text, { color }]}>{item.title}</Text>
 				</View>
 			</TouchableOpacity>
 		);
@@ -38,6 +42,7 @@ const FilterOptions = () => {
 			keyExtractor={(item) => item.id}
 			renderItem={renderItem}
 			style={styles.container}
+			showsHorizontalScrollIndicator={false}
 		/>
 	);
 };
