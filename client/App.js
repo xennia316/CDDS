@@ -1,22 +1,20 @@
 import React from "react";
-import { StyleSheet, Text, View, TextInput } from "react-native";
-import { FilterOptions, Header } from "./components";
+import { ScrollView, View } from "react-native";
+import { Home, DetailPage, CartPage } from "./pages";
+
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+
+const Stack = createStackNavigator();
 
 export default function App() {
 	return (
-		<View style={styles.container}>
-			<Header />
-			<FilterOptions />
-		</View>
+		<NavigationContainer>
+			<Stack.Navigator>
+				<Stack.Screen name="Home" component={Home} />
+				<Stack.Screen name="Details" component={DetailPage} />
+				<Stack.Screen name="Details" component={CartPage} />
+			</Stack.Navigator>
+		</NavigationContainer>
 	);
 }
-
-const styles = StyleSheet.create({
-	container: {
-		backgroundColor: "#fff",
-		alignItems: "center",
-		paddingVertical: 48,
-		paddingHorizontal: 12,
-		gap: 12,
-	},
-});
