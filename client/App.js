@@ -1,20 +1,22 @@
 import React from "react";
 import { StyleSheet, Text, View, TextInput } from "react-native";
-import Header from "./components/header/Header.component";
+import { FilterOptions, Header } from "./components";
 
 export default function App() {
 	return (
 		<View style={styles.container}>
 			<Header />
+			<FilterOptions />
 		</View>
 	);
 }
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
 		backgroundColor: "#fff",
 		alignItems: "center",
-		padding: 32,
+		paddingVertical: 48,
+		paddingHorizontal: 12,
+		gap: 12,
 	},
 });
