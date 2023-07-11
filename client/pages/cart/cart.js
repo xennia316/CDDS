@@ -12,7 +12,6 @@ export default styles = StyleSheet.create({
 		position: "relative",
 		backgroundColor: "#fff",
 		alignItems: "center",
-		paddingVertical: 48,
 		paddingHorizontal: 18,
 		gap: 24,
 	},
@@ -26,5 +25,9 @@ export default styles = StyleSheet.create({
 		width: "100%",
 		position: "absolute",
 		bottom: 0,
+	},
+	text: {
+		color: "white",
+		fontSize: 18,
 	},
 });

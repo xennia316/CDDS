@@ -2,13 +2,12 @@ import { StyleSheet } from "react-native-web";
 export default styles = StyleSheet.create({
 	container: {
 		height: "100%",
-		width: "90%",
+		width: "100%",
 		position: "relative",
 		backgroundColor: "#fff",
 		alignSelf: "center",
 		alignItems: "center",
-		paddingVertical: 30,
-		paddingHorizontal: 18,
+		paddingHorizontal: 24,
 		gap: 24,
 	},
 	button: {
