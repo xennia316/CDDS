@@ -5,7 +5,6 @@ export default styles = StyleSheet.create({
 	card: {
 		height: "100%",
 		width: 300,
-		backgroundColor: "black",
 		borderRadius: 40,
 		marginHorizontal: 6,
 		padding: 20,
@@ -84,7 +83,7 @@ export default styles = StyleSheet.create({
 		opacity: 0.7,
 		borderRadius: "50%",
 		borderWidth: 1,
-		borderColor: "rgba(255, 255, 255, 0.1)",
+		borderColor: "#E8E8EC",
 	},
 	like: {
 		height: 38,

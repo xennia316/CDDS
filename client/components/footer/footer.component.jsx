@@ -21,7 +21,10 @@ const Footer = ({ navigation }) => {
 							borderRadius: "50%",
 						},
 					]}
-					onPress={() => handleItemPress(0)}
+					onPress={() => {
+						handleItemPress(0);
+						navigation.navigate("Home");
+					}}
 				>
 					<Ionicons
 						style={[

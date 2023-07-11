@@ -21,12 +21,17 @@ const PopularCarousel = ({ navigation }) => {
 	const renderItems = ({ item }) => {
 		const isSelected = selectedItem === item.id;
 		const backgroundColor = isSelected ? "#F7F7F7" : "#262628";
-		const marginTop = isSelected ? -10 : 0;
 		return (
-			<TouchableHighlight onPress={() => setSelectedItem(item.id)}>
+			<TouchableHighlight
+				onPress={() =>
+					selectedItem == item.id
+						? setSelectedItem(null)
+						: setSelectedItem(item.id)
+				}
+			>
 				<ImageBackground
 					source={item.image}
-					style={[styles.card, { backgroundColor, marginTop }]}
+					style={[styles.card, { backgroundColor }]}
 				>
 					<View style={styles.inner}>
 						<Text style={styles.textName}>{item.name}</Text>

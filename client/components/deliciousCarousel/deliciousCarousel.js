@@ -11,7 +11,7 @@ export default styles = StyleSheet.create({
 	card: {
 		height: "100%",
 		width: 300,
-		backgroundColor: "black",
+		backgroundColor: "#2e2e2e",
 		borderRadius: 40,
 		marginHorizontal: 6,
 		padding: 20,
@@ -112,6 +112,6 @@ export default styles = StyleSheet.create({
 		justifyContent: "space-between",
 	},
 	heading2: {
-		color: "red",
+		color: "#FF8C3E",
 	},
 });
