@@ -1,5 +1,4 @@
 import React from "react";
-import { ScrollView, View } from "react-native";
 import { Home, DetailPage, CartPage } from "./pages";
 
 import { NavigationContainer } from "@react-navigation/native";

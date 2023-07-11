@@ -10,14 +10,14 @@ import {
 
 import styles from "./home";
 
-const Home = () => {
+const Home = ({ navigation }) => {
 	return (
 		<View style={styles.container}>
 			<Header />
 			<FilterOptions />
-			<PopularCarousel />
-			<DeliciousCarousel />
-			<Footer />
+			<PopularCarousel navigation={navigation} />
+			<DeliciousCarousel navigation={navigation} />
+			<Footer navigation={navigation} />
 		</View>
 	);
 };

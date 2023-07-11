@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./footer";
 
-const Footer = () => {
+const Footer = ({ navigation }) => {
 	const [selectedItem, setSelectedItem] = useState(null);
 
 	const handleItemPress = (index) => {
@@ -61,7 +61,10 @@ const Footer = () => {
 							borderRadius: "50%",
 						},
 					]}
-					onPress={() => handleItemPress(2)}
+					onPress={() => {
+						handleItemPress(2);
+						navigation.navigate("CartPage");
+					}}
 				>
 					<Ionicons
 						style={[

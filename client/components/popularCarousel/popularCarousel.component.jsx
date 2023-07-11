@@ -16,7 +16,7 @@ import data from "../static.js";
 import styles from "./popularCarousel.js";
 import fullstar from "../../assets/images/fullStar.png";
 
-const PopularCarousel = () => {
+const PopularCarousel = ({ navigation }) => {
 	const [selectedItem, setSelectedItem] = useState(null);
 	const renderItems = ({ item }) => {
 		const isSelected = selectedItem === item.id;
@@ -38,7 +38,10 @@ const PopularCarousel = () => {
 							</View>
 						</View>
 						<View style={styles.bottom}>
-							<TouchableOpacity style={styles.bigButton}>
+							<TouchableOpacity
+								style={styles.bigButton}
+								onPress={() => navigation.navigate("Details")}
+							>
 								<Text style={styles.addText}>Add to Cart</Text>
 							</TouchableOpacity>
 							<TouchableOpacity style={styles.message}>
