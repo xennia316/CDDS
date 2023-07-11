@@ -6,7 +6,6 @@ export default styles = StyleSheet.create({
 		position: "relative",
 		backgroundColor: "#fff",
 		alignItems: "center",
-		paddingVertical: 48,
 		paddingHorizontal: 18,
 		gap: 24,
 	},
