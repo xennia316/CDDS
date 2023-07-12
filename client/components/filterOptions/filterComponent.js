@@ -19,7 +19,6 @@ export default styles = StyleSheet.create({
 		fontSize: 12,
 		paddingTop: 4,
 		fontWeight: 300,
-		font: "Poppins",
 	},
 	mainWrapper: {
 		height: "10%",
