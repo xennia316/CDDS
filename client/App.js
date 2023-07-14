@@ -12,7 +12,8 @@ import { API_KEY, APP_ID } from "@env";
 export default function App() {
 	const searchRecipes = async (query) => {
 		try {
-			const url = `https://api.edamam.com/api/recipes/v2?type=public&q=${query}&app_id=${APP_ID}&app_key=${API_KEY}`;
+			const url = `https://api.edamam.com/api/food-database/v2/parser?app_id=${APP_ID}&app_key=${API_KEY}&nutrition-type=cooking
+			`;
 			const response = await axios.get(url);
 			const data = response.data;
 
@@ -20,8 +21,6 @@ export default function App() {
 		} catch {
 			console.error("This is an error");
 		}
-
-		// Do something with the recipe search results
 	};
 	// const fetchData = async () => {
 	// 	try {
@@ -36,7 +35,7 @@ export default function App() {
 	// 	}
 	// };
 
-	searchRecipes("omelette");
+	searchRecipes("tomatoes");
 	return (
 		<NavigationContainer>
 			<Stack.Navigator>
