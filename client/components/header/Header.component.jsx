@@ -1,11 +1,29 @@
-import React from "react";
-import { Text, View, TextInput, TouchableOpacity } from "react-native";
-
-// Importing stylesheet and Icons
+import React, { useState } from "react";
+import { Text, View, TextInput, TouchableOpacity, Linking } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./header";
+import { API_KEY, APP_ID } from "@env";
 
 const Header = () => {
+	const [filter, setFilter] = useState("salt");
+
+	const handleText = (newText) => {
+		setFilter(newText);
+	};
+	const searchRecipes = async () => {
+		try {
+			const url = `https://api.edamam.com/api/food-database/v2/parser?app_id=13d37870&app_key=66e7448d21736de245d5ea20ed9a1771&ingr=salt&nutrition-type=cooking
+			`;
+			const response = await axios.get(url);
+			const data = response.data;
+			console.log("This is the text data", data);
+		} catch {
+			console.error("This is an error message");
+			console.log("api key", API_KEY);
+			console.log("app id", APP_ID);
+		}
+	};
+
 	return (
 		<View style={styles.headerContainer}>
 			<View style={styles.wrapper}>
@@ -15,10 +33,20 @@ const Header = () => {
 				</View>
 				<View style={styles.textInput}>
 					<Ionicons name="location-outline" size={18} color="black" />
-					<TextInput placeholder="Text Field" style={styles.textInputField} />
+					<TextInput
+						placeholder="Text Field"
+						value={filter}
+						onChange={handleText}
+						style={styles.textInputField}
+					/>
 				</View>
 			</View>
-			<TouchableOpacity style={styles.filter}>
+			<TouchableOpacity
+				style={styles.filter}
+				onPress={() => {
+					searchRecipes;
+				}}
+			>
 				<Ionicons name="ios-filter" size={18} color="white" />
 			</TouchableOpacity>
 		</View>
