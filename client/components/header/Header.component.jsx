@@ -19,8 +19,6 @@ const Header = () => {
 			console.log("This is the text data", data);
 		} catch {
 			console.error("This is an error message");
-			console.log("api key", API_KEY);
-			console.log("app id", APP_ID);
 		}
 	};
 
