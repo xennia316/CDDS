@@ -10,12 +10,12 @@ import {
 } from "react-native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
-import data from "../static.js";
+// import data from "../static.js";
 
 import styles from "./deliciousCarousel.js";
 import fullstar from "../../assets/images/fullStar.png";
 
-const DeliciousCarousel = () => {
+const DeliciousCarousel = (data) => {
 	const renderItems = ({ item }) => {
 		return (
 			<TouchableHighlight>
