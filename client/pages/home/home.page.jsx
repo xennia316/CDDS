@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import {
 	FilterOptions,
@@ -9,14 +9,16 @@ import {
 } from "../../components";
 
 import styles from "./home";
+import { set } from "mongoose";
 
 const Home = ({ navigation }) => {
+	const [data, setData] = useState({});
 	return (
 		<View style={styles.container}>
-			<Header />
+			<Header setData={setData} />
 			<FilterOptions />
 			<PopularCarousel navigation={navigation} />
-			<DeliciousCarousel navigation={navigation} />
+			<DeliciousCarousel navigation={navigation} data={data} />
 			<Footer navigation={navigation} />
 		</View>
 	);
