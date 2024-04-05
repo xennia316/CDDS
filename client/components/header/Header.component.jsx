@@ -4,7 +4,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./header";
 import { API_KEY, APP_ID } from "@env";
 
-const Header = () => {
+const Header = (setData) => {
 	const [filter, setFilter] = useState("salt");
 
 	const handleText = (newText) => {
@@ -16,7 +16,7 @@ const Header = () => {
 			`;
 			const response = await axios.get(url);
 			const data = response.data;
-			console.log("This is the text data", data);
+			setData(data);
 		} catch {
 			console.error("This is an error message");
 		}
