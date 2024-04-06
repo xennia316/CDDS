@@ -8,10 +8,6 @@ const CartCard = () => {
 
 	const [showCard, setShowCard] = useState(true);
 
-	// const handleToggleCard = () => {
-
-	// };
-
 	const handleDecrease = () => {
 		setNumber(number - 1);
 	};
