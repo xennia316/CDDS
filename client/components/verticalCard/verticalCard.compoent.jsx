@@ -38,10 +38,6 @@ const VerticalCard = () => {
 			<View style={styles.row}>
 				<Text style={styles.text}>My Text</Text>
 			</View>
-			{/* <View style={styles.row}> */}
-			{/* <CheckBox /> */}
-			{/* <Text style={styles.text}></Text> */}
-			{/* </View> */}
 		</View>
 	);
 };
