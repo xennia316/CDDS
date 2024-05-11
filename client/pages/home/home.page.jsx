@@ -9,7 +9,6 @@ import {
 } from "../../components";
 
 import styles from "./home";
-import { set } from "mongoose";
 
 const Home = ({ navigation }) => {
 	const [data, setData] = useState({});
