@@ -3,15 +3,15 @@ import { StyleSheet } from "react-native";
 const styles = StyleSheet.create({
 	headerContainer: {
 		flexDirection: "row",
-		gap: 12,
 		width: "100%",
+		justifyContent: "space-between",
 	},
 	wrapper: {
 		backgroundColor: "#fff",
 		borderColor: "gray",
 		borderRadius: 24,
-		borderWidth: 1,
-		width: "80%",
+		borderWidth: 0.6,
+		width: "85%",
 		flexDirection: "row",
 		height: 40,
 		justifyContent: "space-between",
