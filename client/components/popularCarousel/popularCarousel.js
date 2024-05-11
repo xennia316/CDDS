@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
 	container: { width: "100%", height: "45%", flexDirection: "column", gap: 12 },
-	carousel: { height: "100%" },
+	carousel: { height: "100%", backgroundColor: "" },
 	card: {
 		height: "100%",
 		width: 300,
@@ -23,10 +23,14 @@ export default styles = StyleSheet.create({
 	textName: {
 		color: "white",
 		fontSize: 24,
-		fontWeight: "400",
+		fontWeight: "bold",
 	},
 
-	textPrice: { color: "white", fontSize: 24, fontWeight: "400" },
+	textPrice: {
+		color: "white",
+		fontSize: 24,
+		fontWeight: "bold",
+	},
 
 	textRating: { color: "white" },
 
@@ -80,7 +84,7 @@ export default styles = StyleSheet.create({
 		left: 0,
 		right: 0,
 		backgroundColor: "white",
-		opacity: 0.7,
+		opacity: 0.6,
 		borderRadius: "50%",
 		borderWidth: 1,
 		borderColor: "#E8E8EC",

@@ -22,7 +22,7 @@ const PopularCarousel = ({ navigation }) => {
 		const isSelected = selectedItem === item.id;
 		const backgroundColor = isSelected ? "#F7F7F7" : "#262628";
 		return (
-			<TouchableHighlight
+			<TouchableOpacity
 				onPress={() =>
 					selectedItem == item.id
 						? setSelectedItem(null)
@@ -53,14 +53,14 @@ const PopularCarousel = ({ navigation }) => {
 								<View style={styles.blurView} />
 								<Ionicons
 									size={18}
-									style={styles.icon}
+									style={isSelected ? { color: "#262628" } : styles.icon}
 									name="ios-mail-open-outline"
 								/>
 							</TouchableOpacity>
 							<TouchableOpacity style={styles.like}>
 								<View style={styles.blurView} />
 								<Ionicons
-									style={styles.icon}
+									style={isSelected ? { color: "#262628" } : styles.icon}
 									size={18}
 									name="ios-heart-sharp"
 								/>
@@ -68,7 +68,7 @@ const PopularCarousel = ({ navigation }) => {
 						</View>
 					</View>
 				</ImageBackground>
-			</TouchableHighlight>
+			</TouchableOpacity>
 		);
 	};
 
