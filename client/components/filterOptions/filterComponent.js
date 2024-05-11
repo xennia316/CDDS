@@ -6,19 +6,20 @@ export default styles = StyleSheet.create({
 	wrapper: {
 		flexDirection: "column",
 		alignItems: "center",
-		margin: 4,
-		justifyContent: "center",
+		margin: 8,
+		// justifyContent: "center",
 	},
 	image: {
 		height: 50,
 		width: 50,
-		padding: 8,
-		borderRadius: 100,
+		padding: 12,
+		borderRadius: "50%",
+		resizeMode: "center",
 	},
 	text: {
-		fontSize: 12,
+		fontSize: 10,
 		paddingTop: 4,
-		fontWeight: 300,
+		fontWeight: 500,
 	},
 	mainWrapper: {
 		height: "10%",

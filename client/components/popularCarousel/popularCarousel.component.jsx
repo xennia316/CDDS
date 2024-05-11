@@ -34,12 +34,36 @@ const PopularCarousel = ({ navigation }) => {
 					style={[styles.card, { backgroundColor }]}
 				>
 					<View style={styles.inner}>
-						<Text style={styles.textName}>{item.name}</Text>
+						<Text
+							style={
+								isSelected
+									? [styles.textName, { color: "#262628" }]
+									: styles.textName
+							}
+						>
+							{item.name}
+						</Text>
 						<View style={styles.middle}>
-							<Text style={styles.textPrice}>{item.price}</Text>
+							<Text
+								style={
+									isSelected
+										? [styles.textPrice, { color: "#262628" }]
+										: styles.textPrice
+								}
+							>
+								{item.price}
+							</Text>
 							<View style={styles.imageContainer}>
 								<Image style={styles.img} source={fullstar} />
-								<Text style={styles.textRating}>{item.rating}</Text>
+								<Text
+									style={
+										isSelected
+											? [styles.textRating, { color: "#262628" }]
+											: styles.textRating
+									}
+								>
+									{item.rating}
+								</Text>
 							</View>
 						</View>
 						<View style={styles.bottom}>
