@@ -11,7 +11,7 @@ export default styles = StyleSheet.create({
 		width: "95%",
 		borderRadius: 50,
 		position: "absolute",
-		bottom: 0,
+		bottom: 2,
 	},
 	footer: {
 		flexDirection: "row",
@@ -19,7 +19,7 @@ export default styles = StyleSheet.create({
 		width: "98%",
 		padding: 8,
 		backgroundColor: "#eee",
-		opacity: 0.5,
+		opacity: 0.85,
 		borderRadius: 50,
 	},
 	footerItem: {
