@@ -5,7 +5,7 @@ import styles from "./header";
 import { API_KEY, APP_ID } from "@env";
 
 const Header = (setData) => {
-	const [filter, setFilter] = useState("salt");
+	const [filter, setFilter] = useState("");
 
 	const handleText = (newText) => {
 		setFilter(newText);
@@ -32,7 +32,7 @@ const Header = (setData) => {
 				<View style={styles.textInput}>
 					<Ionicons name="location-outline" size={18} color="black" />
 					<TextInput
-						placeholder="Text Field"
+						placeholder="New York, NYC"
 						value={filter}
 						onChange={handleText}
 						style={styles.textInputField}
