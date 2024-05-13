@@ -1,14 +1,13 @@
 import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
 	container: {
-		height: 160,
+		height: 140,
 		borderRadius: 18,
 		backgroundColor: "white",
 		flexDirection: "row",
 		alignItems: "center",
 		// justifyContent: "space-around",
-		gap: 8,
-		padding: 20,
+		gap: 12,
 		width: "100%",
 		shadowColor: "#000",
 		shadowOffset: {
@@ -19,6 +18,7 @@ export default styles = StyleSheet.create({
 		shadowRadius: 2.22,
 
 		elevation: 3,
+		marginVertical: 8,
 	},
 	row: {
 		flex: 1,
@@ -47,7 +47,7 @@ export default styles = StyleSheet.create({
 	},
 	text: {},
 	largeText: {
-		fontSize: 18,
+		fontSize: 16,
 	},
 	mediumText: {
 		fontSize: 14,
@@ -61,21 +61,21 @@ export default styles = StyleSheet.create({
 	},
 	button: {
 		backgroundColor: "white",
-		borderRadius: 10,
+		borderRadius: "50%",
 		borderWidth: 1,
-		borderColor: "black",
-		width: 20,
-		height: 20,
-		justifyContent: "center",
+		borderColor: "grey",
+		width: 18,
+		height: 18,
+		justifyContent: "start",
 		alignItems: "center",
 	},
 	buttonText: {
 		color: "black",
-		fontSize: 16,
+		fontSize: 12,
 	},
 	closeRow: {
 		position: "absolute",
-		bottom: 30,
+		bottom: 18,
 		right: 20,
 	},
 	closeButton: {
