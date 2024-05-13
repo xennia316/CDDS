@@ -6,8 +6,9 @@ import styles from "./footer";
 const Footer = ({ navigation }) => {
 	const [selectedItem, setSelectedItem] = useState(null);
 
-	const handleItemPress = (index) => {
+	const handleItemPress = (index, route) => {
 		setSelectedItem(index);
+		navigation.navigate(route);
 	};
 	const colorDeterminer = [
 		{ color: "white" },
@@ -23,8 +24,7 @@ const Footer = ({ navigation }) => {
 				<TouchableOpacity
 					style={[styles.footerItem, selectedItem === 0 && colorDeterminer[1]]}
 					onPress={() => {
-						handleItemPress(0);
-						navigation.navigate("Home");
+						handleItemPress(0, "Home");
 					}}
 				>
 					<Ionicons
@@ -39,7 +39,7 @@ const Footer = ({ navigation }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={[styles.footerItem, selectedItem === 1 && colorDeterminer]}
-					onPress={() => handleItemPress(1)}
+					onPress={() => handleItemPress(1, "")}
 				>
 					<Ionicons
 						style={[
@@ -54,8 +54,7 @@ const Footer = ({ navigation }) => {
 				<TouchableOpacity
 					style={[styles.footerItem, selectedItem === 2 && colorDeterminer[1]]}
 					onPress={() => {
-						handleItemPress(2);
-						navigation.navigate("CartPage");
+						handleItemPress(2, "CartPage");
 					}}
 				>
 					<Ionicons
@@ -70,7 +69,7 @@ const Footer = ({ navigation }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={[styles.footerItem, selectedItem === 3 && colorDeterminer[1]]}
-					onPress={() => handleItemPress(3)}
+					onPress={() => handleItemPress(3, "")}
 				>
 					<Ionicons
 						style={[
@@ -84,7 +83,7 @@ const Footer = ({ navigation }) => {
 				</TouchableOpacity>
 				<TouchableOpacity
 					style={[styles.footerItem, selectedItem === 4 && colorDeterminer[1]]}
-					onPress={() => handleItemPress(4)}
+					onPress={() => handleItemPress(4, "")}
 				>
 					<Ionicons
 						style={[
