@@ -30,8 +30,10 @@ const CartCard = () => {
 			</View>
 			<View style={[styles.textRow]}>
 				<View>
-					<Text style={[styles.text, styles.largeText]}>Large Text</Text>
-					<Text style={[styles.text, styles.mediumText]}>Medium Text</Text>
+					<Text style={[styles.text, styles.largeText]}>
+						Large Long Text Here
+					</Text>
+					{/* <Text style={[styles.text, styles.mediumText]}>Medium Text</Text> */}
 					<Text style={[styles.text, styles.smallText]}>$18.99</Text>
 				</View>
 				<View style={styles.controls}>
