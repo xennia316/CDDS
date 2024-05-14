@@ -9,7 +9,7 @@ import styles from "./cart";
 const CartPage = () => {
 	return (
 		<View style={styles.container}>
-			<View style={styles.top}>
+			{/* <View style={styles.top}>
 				<TouchableOpacity>
 					<Ionicons
 						name="ios-arrow-back-circle-outline"
@@ -18,7 +18,7 @@ const CartPage = () => {
 					/>
 				</TouchableOpacity>
 				<Text style={{ fontSize: 24, width: "60%" }}>My Cart</Text>
-			</View>
+			</View> */}
 			<CartCard />
 			<CartCard />
 			<TouchableOpacity style={styles.button}>

@@ -13,7 +13,6 @@ export default styles = StyleSheet.create({
 		backgroundColor: "#fff",
 		alignItems: "center",
 		paddingHorizontal: 18,
-		gap: 24,
 	},
 	button: {
 		backgroundColor: "black",
@@ -24,7 +23,7 @@ export default styles = StyleSheet.create({
 		justifyContent: "center",
 		width: "100%",
 		position: "absolute",
-		bottom: 0,
+		bottom: 20,
 	},
 	text: {
 		color: "white",
