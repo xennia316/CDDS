@@ -9,18 +9,19 @@ const Footer = ({ navigation }) => {
 	const handleItemPress = (index) => {
 		setSelectedItem(index);
 	};
+	const colorDeterminer = [
+		{ color: "white" },
+		{
+			backgroundColor: "black",
+			borderRadius: "50%",
+		},
+	];
 
 	return (
 		<View style={styles.container}>
 			<View style={styles.footer}>
 				<TouchableOpacity
-					style={[
-						styles.footerItem,
-						selectedItem === 0 && {
-							backgroundColor: "black",
-							borderRadius: "50%",
-						},
-					]}
+					style={[styles.footerItem, selectedItem === 0 && colorDeterminer[1]]}
 					onPress={() => {
 						handleItemPress(0);
 						navigation.navigate("Home");
@@ -29,7 +30,7 @@ const Footer = ({ navigation }) => {
 					<Ionicons
 						style={[
 							styles.footerText,
-							selectedItem === 0 && { color: "white" },
+							selectedItem === 0 && colorDeterminer[0],
 						]}
 						size={20}
 						name="ios-home-outline"
@@ -37,19 +38,13 @@ const Footer = ({ navigation }) => {
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity
-					style={[
-						styles.footerItem,
-						selectedItem === 1 && {
-							backgroundColor: "black",
-							borderRadius: "50%",
-						},
-					]}
+					style={[styles.footerItem, selectedItem === 1 && colorDeterminer]}
 					onPress={() => handleItemPress(1)}
 				>
 					<Ionicons
 						style={[
 							styles.footerText,
-							selectedItem === 1 && { color: "white" },
+							selectedItem === 1 && colorDeterminer[0],
 						]}
 						size={20}
 						name="ios-mail"
@@ -57,13 +52,7 @@ const Footer = ({ navigation }) => {
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity
-					style={[
-						styles.footerItem,
-						selectedItem === 2 && {
-							backgroundColor: "black",
-							borderRadius: "50%",
-						},
-					]}
+					style={[styles.footerItem, selectedItem === 2 && colorDeterminer[1]]}
 					onPress={() => {
 						handleItemPress(2);
 						navigation.navigate("CartPage");
@@ -72,9 +61,7 @@ const Footer = ({ navigation }) => {
 					<Ionicons
 						style={[
 							styles.footerText,
-							selectedItem === 2 && {
-								color: "white",
-							},
+							selectedItem === 2 && colorDeterminer[0],
 						]}
 						size={20}
 						name="ios-cart-outline"
@@ -82,19 +69,13 @@ const Footer = ({ navigation }) => {
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity
-					style={[
-						styles.footerItem,
-						selectedItem === 3 && {
-							backgroundColor: "black",
-							borderRadius: "50%",
-						},
-					]}
+					style={[styles.footerItem, selectedItem === 3 && colorDeterminer[1]]}
 					onPress={() => handleItemPress(3)}
 				>
 					<Ionicons
 						style={[
 							styles.footerText,
-							selectedItem === 3 && { color: "white" },
+							selectedItem === 3 && colorDeterminer[0],
 						]}
 						size={20}
 						name="ios-notifications-outline"
@@ -102,19 +83,13 @@ const Footer = ({ navigation }) => {
 					/>
 				</TouchableOpacity>
 				<TouchableOpacity
-					style={[
-						styles.footerItem,
-						selectedItem === 4 && {
-							backgroundColor: "black",
-							borderRadius: "50%",
-						},
-					]}
+					style={[styles.footerItem, selectedItem === 4 && colorDeterminer[1]]}
 					onPress={() => handleItemPress(4)}
 				>
 					<Ionicons
 						style={[
 							styles.footerText,
-							selectedItem === 4 && { color: "white" },
+							selectedItem === 4 && colorDeterminer[0],
 						]}
 						size={20}
 						name="ios-person-outline"
