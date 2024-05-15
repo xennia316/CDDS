@@ -5,24 +5,34 @@ import { CartCard } from "../../components";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./cart";
+import { FlatList } from "react-native-web";
+import data from "../../components/static";
+
+const renderItems = (item) => {
+	return (
+		<>
+			<CartCard
+				image={item.item.image}
+				title={item.item.name}
+				price={item.item.price}
+			/>
+		</>
+	);
+};
 
 const CartPage = () => {
 	return (
 		<View style={styles.container}>
-			{/* <View style={styles.top}>
-				<TouchableOpacity>
-					<Ionicons
-						name="ios-arrow-back-circle-outline"
-						color="lightgray"
-						size={40}
-					/>
-				</TouchableOpacity>
-				<Text style={{ fontSize: 24, width: "60%" }}>My Cart</Text>
-			</View> */}
-			<CartCard />
-			<CartCard />
+			<FlatList data={data} renderItem={renderItems} />
+			{/* <FlatList
+				style={styles.carousel}
+				horizontal
+				data={data}
+				renderItem={renderItems}
+				showsHorizontalScrollIndicator={false}
+			/> */}
 			<TouchableOpacity style={styles.button}>
-				<Text style={styles.text}>Add to Cart</Text>
+				<Text style={styles.text}>Checkout</Text>
 			</TouchableOpacity>
 		</View>
 	);

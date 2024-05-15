@@ -1,8 +1,6 @@
 import { StyleSheet } from "react-native";
 export default styles = StyleSheet.create({
 	top: {
-		flexDirection: "row",
-		justifyContent: "space-between",
 		width: "100%",
 		alignItems: "center",
 	},

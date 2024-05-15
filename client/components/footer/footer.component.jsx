@@ -4,7 +4,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./footer";
 
 const Footer = ({ navigation }) => {
-	const [selectedItem, setSelectedItem] = useState(null);
+	const [selectedItem, setSelectedItem] = useState(0);
 
 	const handleItemPress = (index, route) => {
 		setSelectedItem(index);

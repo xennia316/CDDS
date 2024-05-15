@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import styles from "./cartCard";
 
-const CartCard = () => {
+const CartCard = (item) => {
 	const [number, setNumber] = useState(4);
 
 	const [showCard, setShowCard] = useState(true);
@@ -24,17 +24,21 @@ const CartCard = () => {
 		<View style={styles.container}>
 			<View style={styles.rowImage}>
 				<Image
-					source={require("../../assets/images/orange.png")}
+					source={
+						item.image ? item.image : require("../../assets/images/orange.png")
+					}
 					style={styles.image}
 				/>
 			</View>
 			<View style={[styles.textRow]}>
 				<View>
 					<Text style={[styles.text, styles.largeText]}>
-						Large Long Text Here
+						{item.title ? item.title : "Large Long Text Here"}
 					</Text>
 					{/* <Text style={[styles.text, styles.mediumText]}>Medium Text</Text> */}
-					<Text style={[styles.text, styles.smallText]}>$18.99</Text>
+					<Text style={[styles.text, styles.smallText]}>
+						${item.price ? item.price : 18.99}
+					</Text>
 				</View>
 				<View style={styles.controls}>
 					<TouchableOpacity style={styles.button} onPress={handleDecrease}>
