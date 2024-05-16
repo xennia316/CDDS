@@ -8,22 +8,29 @@ import styles from "./cart";
 import { FlatList } from "react-native-web";
 import data from "../../components/static";
 
-const renderItems = (item) => {
+const renderItems = ({ item }) => {
 	return (
-		<>
-			<CartCard
+		<View>
+			{/* <CartCard
 				image={item.item.image}
 				title={item.item.name}
 				price={item.item.price}
-			/>
-		</>
+			/> */}
+		</View>
 	);
 };
 
 const CartPage = () => {
 	return (
 		<View style={styles.container}>
-			<FlatList data={data} renderItem={renderItems} />
+			<View>
+				<FlatList
+					vertical
+					showVerticalScrollBar={false}
+					data={data}
+					renderItem={renderItems}
+				/>
+			</View>
 			{/* <FlatList
 				style={styles.carousel}
 				horizontal
