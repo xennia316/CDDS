@@ -28,7 +28,7 @@ const CartPage = () => {
 					vertical
 					showVerticalScrollBar={false}
 					data={data}
-					renderItem={renderItems}
+					// renderItem={renderItems}
 				/>
 			</View>
 			{/* <FlatList
