@@ -6,7 +6,6 @@ export default styles = StyleSheet.create({
 		backgroundColor: "white",
 		flexDirection: "row",
 		alignItems: "center",
-		// justifyContent: "space-around",
 		gap: 12,
 		width: "100%",
 		shadowColor: "#000",
@@ -16,9 +15,9 @@ export default styles = StyleSheet.create({
 		},
 		shadowOpacity: 0.22,
 		shadowRadius: 2.22,
-
 		elevation: 3,
 		marginVertical: 8,
+		marginHorizontal: 0,
 	},
 	row: {
 		flex: 1,

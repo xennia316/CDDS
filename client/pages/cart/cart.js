@@ -7,10 +7,9 @@ export default styles = StyleSheet.create({
 	container: {
 		height: "100%",
 		width: "100%",
-		position: "relative",
 		backgroundColor: "#fff",
 		alignItems: "center",
-		paddingHorizontal: 18,
+		paddingHorizontal: 12,
 	},
 	button: {
 		backgroundColor: "black",
