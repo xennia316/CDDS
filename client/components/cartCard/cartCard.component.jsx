@@ -9,7 +9,7 @@ const CartCard = (item) => {
 	const [showCard, setShowCard] = useState(true);
 
 	const handleDecrease = () => {
-		setNumber(number - 1);
+		number !== 0 && setNumber(number - 1);
 	};
 
 	const handleIncrease = () => {
