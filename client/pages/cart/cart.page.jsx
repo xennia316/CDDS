@@ -15,14 +15,13 @@ const renderItems = ({ item }) => {
 const CartPage = () => {
 	return (
 		<View style={styles.container}>
-			<View style={styles.top}>
-				<FlatList
-					vertical
-					showVerticalScrollBar={false}
-					data={data}
-					renderItem={renderItems}
-				/>
-			</View>
+			<FlatList
+				style={styles.top}
+				vertical
+				showVerticalScrollBar={false}
+				data={data}
+				renderItem={renderItems}
+			/>
 			<TouchableOpacity style={styles.button}>
 				<Text style={styles.text}>Checkout</Text>
 			</TouchableOpacity>
