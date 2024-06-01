@@ -27,4 +27,17 @@ export default styles = StyleSheet.create({
 		color: "white",
 		fontSize: 18,
 	},
+	emptyList: {
+		height: 500,
+		width: "100%",
+		flexDirection: "column",
+		alignItems: "center",
+		justifyContent: "center",
+	},
+	textEmpty: {
+		fontWeight: "400",
+		color: "grey",
+		textAlign: "center",
+		fontSize: 36,
+	},
 });
