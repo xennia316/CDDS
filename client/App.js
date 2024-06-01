@@ -13,7 +13,7 @@ export default function App() {
 			<Stack.Navigator>
 				<Stack.Screen name="Home" component={Home} />
 				<Stack.Screen name="Details" component={DetailPage} />
-				<Stack.Screen name="Your Cart" component={CartPage} />
+				<Stack.Screen name="CartPage" component={CartPage} />
 			</Stack.Navigator>
 		</NavigationContainer>
 	);
