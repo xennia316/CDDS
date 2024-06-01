@@ -38,7 +38,11 @@ const CartCard = ({ item, data, setData }) => {
 					</Text>
 				</View>
 				<View style={styles.controls}>
-					<TouchableOpacity style={styles.button} onPress={handleDecrease}>
+					<TouchableOpacity
+						disabled={number === 0 || number < 0}
+						style={styles.button}
+						onPress={handleDecrease}
+					>
 						<Text style={styles.buttonText}>-</Text>
 					</TouchableOpacity>
 					<Text style={[styles.text, styles.number]}>{number}</Text>

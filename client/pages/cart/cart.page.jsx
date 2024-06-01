@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity, FlatList } from "react-native";
 import { CartCard } from "../../components";
-import Ionicons from "@expo/vector-icons/Ionicons";
 import styles from "./cart";
 import pic from "../../assets/images/mexicangreenwave.png";
 
