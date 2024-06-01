@@ -18,7 +18,6 @@ const CartCard = (item) => {
 
 	const handleClose = () => {
 		setShowCard(false);
-		console.log(showCard, "done");
 	};
 
 	return (
