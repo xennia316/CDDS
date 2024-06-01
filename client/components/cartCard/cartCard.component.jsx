@@ -40,7 +40,7 @@ const CartCard = (item) => {
 						</Text>
 						{/* <Text style={[styles.text, styles.mediumText]}>Medium Text</Text> */}
 						<Text style={[styles.text, styles.smallText]}>
-							${item.price ? item.price : 18.99}
+							{item.price ? item.price : 18.99}
 						</Text>
 					</View>
 					<View style={styles.controls}>
