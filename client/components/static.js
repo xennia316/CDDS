@@ -5,7 +5,7 @@ export default data = [
 		image: pic,
 		name: "Pepperoni pizza",
 		price: "$5.69",
-		rating: "4.0 (1,02k)",
+		rating: "4.0 (1.02k)",
 	},
 	{
 		id: 2,
