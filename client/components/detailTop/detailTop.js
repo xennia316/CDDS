@@ -1,7 +1,12 @@
 import { StyleSheet } from "react-native";
 
 export default styles = StyleSheet.create({
-	container: { width: "100%", flexDirection: "column", gap: 18 },
+	container: {
+		width: "100%",
+		flexDirection: "column",
+		gap: 18,
+		paddingVertical: 18,
+	},
 	top: {
 		flexDirection: "row",
 		width: "100%",
