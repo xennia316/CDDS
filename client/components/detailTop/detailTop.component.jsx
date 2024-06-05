@@ -7,21 +7,10 @@ import fullstar from "../../assets/images/fullStar.png";
 
 import styles from "./detailTop";
 
-const DetailTop = () => {
+const DetailTop = (item) => {
+	console.log(item);
 	return (
 		<View style={styles.container}>
-			<View style={styles.top}>
-				<TouchableOpacity>
-					<Ionicons
-						name="ios-arrow-back-circle-outline"
-						color="lightgray"
-						size={40}
-					/>
-				</TouchableOpacity>
-				<TouchableOpacity>
-					<Ionicons name="ios-heart-circle" color="lightgray" size={40} />
-				</TouchableOpacity>
-			</View>
 			<View>
 				<Text style={styles.heading}>Italian Hot Pizza</Text>
 				<View style={styles.midContainer}>
