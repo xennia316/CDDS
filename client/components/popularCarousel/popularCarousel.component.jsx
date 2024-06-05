@@ -6,11 +6,9 @@ import {
 	ImageBackground,
 	Image,
 	TouchableOpacity,
-	TouchableHighlight,
 } from "react-native";
 
 import Ionicons from "@expo/vector-icons/Ionicons";
-import { PopularCard } from "../index.js";
 import data from "../static.js";
 
 import styles from "./popularCarousel.js";
@@ -23,11 +21,12 @@ const PopularCarousel = ({ navigation }) => {
 		const backgroundColor = isSelected ? "#F7F7F7" : "#262628";
 		return (
 			<TouchableOpacity
-				onPress={() =>
+				onPress={() => {
 					selectedItem == item.id
 						? setSelectedItem(null)
-						: setSelectedItem(item.id)
-				}
+						: setSelectedItem(item.id);
+					navigation.navigate("Details", (item = { item }));
+				}}
 			>
 				<ImageBackground
 					source={item.image}
@@ -67,10 +66,7 @@ const PopularCarousel = ({ navigation }) => {
 							</View>
 						</View>
 						<View style={styles.bottom}>
-							<TouchableOpacity
-								style={styles.bigButton}
-								onPress={() => navigation.navigate("Details")}
-							>
+							<TouchableOpacity style={styles.bigButton}>
 								<Text style={styles.addText}>Add to Cart</Text>
 							</TouchableOpacity>
 							<TouchableOpacity style={styles.message}>
