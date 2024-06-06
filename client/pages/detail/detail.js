@@ -19,7 +19,7 @@ export default styles = StyleSheet.create({
 		justifyContent: "center",
 		width: "100%",
 		position: "absolute",
-		bottom: 0,
+		bottom: 20,
 	},
 	text: {
 		color: "white",

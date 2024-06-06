@@ -7,28 +7,26 @@ import detailTopStyles from "../../components/detailTop/detailTop.js";
 import pic from "../../assets/images/Tomato.png";
 import fullstar from "../../assets/images/fullStar.png";
 
-const DetailPage = ({ navigation }) => {
-	console.log(navigation);
+const DetailPage = ({ navigation, route }) => {
+	const { data } = route.params;
 	return (
 		<View style={styles.container}>
 			<View style={detailTopStyles.container}>
 				<View>
-					<Text style={detailTopStyles.heading}>Italian Hot Pizza</Text>
+					<Text style={detailTopStyles.heading}>{data.name}</Text>
 					<View style={detailTopStyles.midContainer}>
 						<View style={detailTopStyles.mid}>
-							<Image source={pic} style={detailTopStyles.img} />
-							<Text>Pizza Italiano</Text>
+							<Image source={data.image} style={detailTopStyles.img} />
+							<Text>{data.name}</Text>
 						</View>
 						<View style={detailTopStyles.mid}>
 							<Image source={fullstar} style={detailTopStyles.img} />
-							<Text>
-								4.8<Text style={{ color: "grey" }}>(2.2k review)</Text>
-							</Text>
+							<Text>{data.rating}</Text>
 							<Ionicons name="ios-chevron-forward" size={16} />
 						</View>
 					</View>
 				</View>
-				<Image style={detailTopStyles.largeImg} source={pic} />
+				<Image style={detailTopStyles.largeImg} source={data.image} />
 				<View style={detailTopStyles.midContainer}>
 					<TouchableOpacity>
 						<Text style={{ fontWeight: "bold" }}>Details</Text>
