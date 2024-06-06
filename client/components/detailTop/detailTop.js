@@ -17,7 +17,6 @@ export default styles = StyleSheet.create({
 	heading: {
 		fontSize: 24,
 		fontWeight: "400",
-		fontFamily: "Poppins",
 	},
 
 	mid: {

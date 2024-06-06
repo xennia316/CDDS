@@ -7,8 +7,7 @@ import fullstar from "../../assets/images/fullStar.png";
 
 import styles from "./detailTop";
 
-const DetailTop = (item) => {
-	console.log(item);
+const DetailTop = () => {
 	return (
 		<View style={styles.container}>
 			<View>

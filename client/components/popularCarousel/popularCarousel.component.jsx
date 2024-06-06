@@ -25,7 +25,7 @@ const PopularCarousel = ({ navigation }) => {
 					selectedItem == item.id
 						? setSelectedItem(null)
 						: setSelectedItem(item.id);
-					navigation.navigate("Details", (item = { item }));
+					navigation.navigate("Details", { data: item });
 				}}
 			>
 				<ImageBackground
