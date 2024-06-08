@@ -4,7 +4,7 @@ export default styles = StyleSheet.create({
 	carousel: { height: "100%", backgroundColor: "" },
 	card: {
 		height: "100%",
-		width: 300,
+		width: 316,
 		borderRadius: 40,
 		marginHorizontal: 6,
 		padding: 20,
